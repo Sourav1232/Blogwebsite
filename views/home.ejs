@@ -1,0 +1,11 @@
+<%- include("partials/header.ejs"); -%>
+
+    <h1>Home</h1>
+    <p><%= startingContent %></p>
+    <% posts.forEach(function(ele){ %>
+        <%const post1=ele.content.slice(0,100)+"...";%>
+       <h1><%= ele.title %></h1>
+       <p><%= post1 %> <a href="/posts/<%=ele._id%>">Read More</a></p>
+    <% }) %>
+
+<%- include("partials/footer.ejs"); -%>
